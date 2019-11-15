@@ -79,12 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to Xp-speit2018&#39;s blog!">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta name="description" content="Matrice起源矩阵产生于对解线性方程组的研究中。例如求解以下方程组：$$\begin{cases}    2x - y = 1 \     x + y = 5 \\end{cases}$$有两种思路。一个是熟知的消元法，它的图形解释为两个直线的交点：  这是一个行观点（row picture）。 另一个观点是，将它视作求解线性组合问题的系数：$$x\begin{bmatrix}2 \1\end">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matrice">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Matrice&#x2F;index.html">
 <meta property="og:site_name" content="Welcome to Xp-speit2018&#39;s blog!">
+<meta property="og:description" content="Matrice起源矩阵产生于对解线性方程组的研究中。例如求解以下方程组：$$\begin{cases}    2x - y = 1 \     x + y = 5 \\end{cases}$$有两种思路。一个是熟知的消元法，它的图形解释为两个直线的交点：  这是一个行观点（row picture）。 另一个观点是，将它视作求解线性组合问题的系数：$$x\begin{bmatrix}2 \1\end">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="e:%5CLessons%5Cmathematics%5Cmd%5CAdvanced-Mathematics%5Crow_picture.png">
+<meta property="og:image" content="e:%5CLessons%5Cmathematics%5Cmd%5CAdvanced-Mathematics%5Ccolumn_picture.png">
+<meta property="og:updated_time" content="2019-11-09T14:05:49.868Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="e:%5CLessons%5Cmathematics%5Cmd%5CAdvanced-Mathematics%5Crow_picture.png">
 
 
 
@@ -114,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/15/Matrice/"/>
 
 
 
 
 
-  <title>Welcome to Xp-speit2018's blog!</title>
+  <title>Matrice | Welcome to Xp-speit2018's blog!</title>
   
 
 
@@ -139,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
 	<a href="https://github.com/Xp-speit2018" target="_blank" rel="noopener"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
@@ -255,166 +260,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/Duality/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xp-speit2018">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome to Xp-speit2018's blog!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/15/Duality/" itemprop="url">Duality</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-15T13:45:17+08:00">
-                2019-11-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="对偶空间"><a href="#对偶空间" class="headerlink" title="对偶空间"></a>对偶空间</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>一个向量空间 $$E$$ 的<strong>对偶空间</strong>$$E^<em>$$定义为从该空间到$$\cal K$$的线性映射集合：<br>$$<br>E^</em> = {\cal L} _{\cal K}({E}, {\cal K})<br>$$<br>这里$\cal K = C$ 或者$\cal K=R$ .</p>
-<blockquote>
-<p><em>以下分析只在有限维度下讨论。</em></p>
-</blockquote>
-<p><strong>本节内容的本质：在向量空间中，一个对象可以表达为若干合理选择的简单对象的线性和。如此可以该对象分解为若干足够简单的对象逐个研究。同时，研究方法也可以合理分解为若干基本的研究方法，这两种方法是等价的。</strong></p>
-<p>在$E$中有一复杂向量$x$，我们可以选择一组恰当的基底$(e_i)_{i \in I}$将其表示为：<br>$$<br>x = \sum \lambda_ie_i<br>$$</p>
-<blockquote>
-<p>这里的“恰当”指对于将要研究的性质来说这组基底是简单的。例如研究内积，正交基通常是恰当的。</p>
-</blockquote>
-<p>同样，对于$E^*$中的一个复杂映射$f$，我们也可以选择一组基底$(\varphi_i)_{i \in I}$将其表示为：<br>$$<br>f = \sum \mu_i \varphi_i<br>$$</p>
-<p>如何选择使这组基底简单，是即将研究的问题。</p>
-<h2 id="构造对偶基"><a href="#构造对偶基" class="headerlink" title="构造对偶基"></a>构造对偶基</h2><blockquote>
-<p>这一部分只是为了说明思想方法。为了简便，取$ E = \cal R^2$。</p>
-</blockquote>
-<p><strong>$\cal R^2$中最简单的基底为 la base canonique</strong>，即$((1,0),(0,1))$。</p>
-<p>相应的，最简单的向量就是这两个基底之一。比如我们取：<br>$$<br>x = e_1 = (1,0)<br>$$<br>那么最简单的映射好像应该是<strong>单位元至单位元</strong>的映射。由此我们想写下：<br>$$<br>\varphi_1 : e_1 \rightarrow 1 \<br>\varphi_2 : e_2 \rightarrow 1<br>$$<br>没错，这就已经成了。可它是怎么来的呢？</p>
-<p>在$\cal R^2$中，对于一个确定的向量来说，它的扩张方向是一维的。那么就可以构建一个从这个维度映射到向量长度的映射：<br>$$<br>f|<em>{Vect(x_0)}: x \rightarrow ||x||，\forall x \in Vect(x_0)<br>$$<br>这个映射的<strong>“简单性”</strong>体现在系数为1，这是一个单位元。如果我们设$e</em>{x_0}$为$x_0$方向的单位向量，那么其实有：<br>$$<br>f|<em>{Vect(x_0)}(x)=f|</em>{Vect(x_0)}(||x||e_{x_0})=||x||f|<em>{Vect(x_0)}(e</em>{x_0})<br>$$<br>于是这里我们可以构造一个<strong>更加简单</strong>的映射$\varphi|<em>{Vect(x_0)}$，它<strong>只关心</strong>单位向量$e</em>{x_0}$：<br>$$<br>\varphi|<em>{Vect(x_0)}(e</em>{x_0}) = 1<br>$$<br>但是，我们想要的映射应该是定义在$\cal R^2$上的。那我们使用<strong>factorisation</strong>的方法，只要用一个<strong>inclusion canonique</strong>就能解决问题（设$G$是$Vect(e_{x_0})$的补空间）：<br>$$<br>\varphi =i_{Vect(e_{x_0})} \circ \varphi|<em>{Vect(x_0)} = p</em>{Vect(e_{x_0})||G}<br>$$<br>其实这就是一个<strong>投影</strong>。</p>
-<p>对于给定向量来说，如此构造的<strong>“简单”映射</strong>已经足够简单。但是对于$\cal R^2$中的任意向量来说，他们的扩张方向有无穷多个，但是可以分解为两个基本方向。</p>
-<p>我们可以看出$f$的定义与由$x_0$确定的扩张方向有关，那么我们取<strong>两个最简单的方向</strong>，定义：<br>$$<br>f_{1}|<em>{Vect(e_1)} = x \rightarrow ||x||, \forall x \in Vect(x_0) \<br>f</em>{2}|<em>{Vect(e_1)} = x \rightarrow ||x||, \forall x \in Vect(x_0)<br>$$<br>类似有：<br>$$<br>f_1 = i</em>{Vect(e_1) \in E} \circ f_1|<em>{Vect(e_1)} = p</em>{Vect(e_1)||Vect(e2)} \<br>f_2 = i_{Vect(e_2) \in E} \circ f_2|<em>{Vect(e_2)} = p</em>{Vect(e_2)||Vect(e1)}<br>$$<br>对的，它们就是一个<strong>投影</strong>。我们来看看他们的输入输出：（以$f_1$为例）：<br>$$<br>\begin{align}<br>&amp;f_1 ((1,0))&amp;=&amp;1 \<br>&amp;f_1 ((42,2))&amp;=&amp;42 \<br>&amp;f_1 ((0,65535)) &amp;=&amp;0 \<br>…<br>\end{align}<br>$$<br>进一步思考第二行的含义：<br>$$<br>\begin{align}<br>f_1((42,2)) &amp;=f_1(42(1,0)+2(0,1)) \<br>&amp;=42f_1((1,0))+2f_1((0,1)) \<br>&amp;=42\times1+2\times0 \<br>&amp;=42 \<br>\end{align}<br>$$<br>于是可以简化，仅仅关心单位向量的映射即：</p>
-<p>$$<br>\varphi_1 : e_1 \rightarrow 1 \<br>\varphi_2 : e_2 \rightarrow 1<br>$$<br>如此构造的<strong>最简单</strong>的一组映射$（\varphi_1，\varphi_2)$就被称为$(e_1,e_2)$的一组对偶基。</p>
-<blockquote>
-<p>太长不看版：$E^*$中的对偶基将$E$中其对应的基底映射到单位元1。</p>
-</blockquote>
-<h2 id="复杂问题的分解"><a href="#复杂问题的分解" class="headerlink" title="复杂问题的分解"></a>复杂问题的分解</h2><p>于是对于$E$与$E^<em>$中的元素，我们有了一套配套的行之有效的分解方法：<br>$$<br>x \in E ,x = \sum_{i=1}^{n} \lambda_i e_i,\lambda_i = e^</em>(x) \<br>\varphi \in E, \varphi = \sum_{i=1}^{n}\mu_ie^<em>_i,\mu_i =\varphi(e_i)<br>$$<br>这就是说，我们选择一组*</em>基底<strong>，就可以计算出任意一个元素在这组基底下分解的</strong>系数**。</p>
-<p>仍然以$E=\cal R^2$为例：</p>
-<p>选择$e_1=(3,4),e_2=(3,-4)$，这组基的对偶基为：<br>$$<br>e^<em>_1 : (x,y) \rightarrow \frac{1}{5}(3,4).(x,y)=\frac{3}{5}x+\frac{4}{5}y \<br>e^</em>_2 : (x,y) \rightarrow \frac{1}{5}(3,-4).(x,y)=\frac{3}{5}x-\frac{4}{5}y<br>$$<br>要计算映射$f : (x,y) \rightarrow 6x$的分解，即计算：<br>$$<br>\mu_1 = \varphi(e_1) = 3 \<br>\mu_2 = \varphi(e_2) = 3<br>$$<br>于是$f = \mu_1+\mu_2$。</p>
-<h2 id="映射到多维度"><a href="#映射到多维度" class="headerlink" title="映射到多维度"></a>映射到多维度</h2><p>对偶空间内的函数都映射到了一根数轴上，也就是说他们的象都是标量。但是很多时候我们面临的将是多维度到多维度的映射，这该如何联系呢？</p>
-<p>思路也很简单，仍旧遵循<strong>从单位元映射到单位元</strong>。</p>
-<p>假设我们想要研究的线性映射$f \in {\cal L}(E,E’)$，由线性映射的性质可知$dimE’ \leq dimE$。</p>
-<p>假设$(e_i)<em>{i \in I}$是$E$的一组基，$(b_i)</em>{i \in I}$是$E^*$的一组famille géneratrice，那么依然可以构造：<br>$$<br>\varphi_{ij} : e_i \rightarrow b_j,(i,j) \in I^2<br>$$</p>
-<h2 id="为什叫“对偶”？"><a href="#为什叫“对偶”？" class="headerlink" title="为什叫“对偶”？"></a>为什叫“对偶”？</h2><p>对偶隐含了“对应”、“等价”这些意思。哪里可以体现呢？</p>
-<p>举个例子：假设$\cal E =(e_i)<em>{i \in I}$和$\cal B =(b_i)</em>{i \in I}$是$\cal R^2$的两组基，一个从$\cal R^2$到$\cal R^2$的线性映射：<br>$$<br>f: x=\lambda_1e_1+\lambda_2e_2 \rightarrow y=\mu_1b_1+\mu_2b_2<br>$$<br>其中$\lambda_1,\lambda_2 \neq 0$（因为dim不能增大）。</p>
-<h3 id="I-分解向量的角度"><a href="#I-分解向量的角度" class="headerlink" title="I. 分解向量的角度"></a>I. 分解向量的角度</h3><p>设$\cal B$在$\cal E$下的分解写作：<br>$$<br>b_1 = (k_1e_1+m_1e_2) \<br>b_2 = (k_2e_1+m_2e_2)<br>$$<br>那么象将写作：<br>$$<br>y = \mu_1(k_1+k_2)e_1 + \mu_2(m_1+m_2)e_2<br>$$</p>
-<h3 id="II-分解映射的角度"><a href="#II-分解映射的角度" class="headerlink" title="II.分解映射的角度"></a>II.分解映射的角度</h3><p>设$f$在$\cal B$和$\cal E$下的分解为：<br>$$<br>f = \frac{\mu_1}{\lambda_1}(k_1\varphi_{11}+m_1\varphi_{12})+\frac{\mu_2}{\lambda_2}(k_2\varphi_{21}+m_2\varphi_{22})<br>$$<br>那么象将写作：<br>$$<br>\begin{align}<br>y &amp;= f(\lambda_1e_1+\lambda_2e_2) \<br>  &amp;= \lambda_1f(e_1)+\lambda_2f(e_2) \<br>  &amp;= \mu_1(k_1\varphi_{11}+m_1\varphi_{12}+k_2\varphi_{21}+m_2\varphi_{22})(e_1) + \mu_2(k_1\varphi_{11}+m_1\varphi_{12}+k_2\varphi_{21}+m_2\varphi_{22})(e_2) \<br>  &amp;= \mu_1(k_1+k_2)b_1+\mu_2(m_1+m_2)b_2<br>\end{align}<br>$$</p>
-<h3 id="III-比较"><a href="#III-比较" class="headerlink" title="III.比较"></a>III.比较</h3><p>这两种方法得到的结果是一样的。从得到相同结果的不同的角度在数学上称为<strong>对偶</strong>。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-	<div>
-      
-	</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -444,9 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/15/Matrice/" itemprop="url">Matrice</a></h1>
+          <h1 class="post-title" itemprop="name headline">Matrice</h1>
         
 
         <div class="post-meta">
@@ -496,9 +342,7 @@
       
 
       
-        
-          
-            <h1 id="Matrice"><a href="#Matrice" class="headerlink" title="Matrice"></a>Matrice</h1><h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p>矩阵产生于对解线性方程组的研究中。例如求解以下方程组：<br>$$<br>\begin{cases}<br>    2x - y = 1 \<br>     x + y = 5 \<br>\end{cases}<br>$$<br>有两种思路。一个是熟知的<strong>消元法</strong>，它的图形解释为两个直线的交点：</p>
+        <h1 id="Matrice"><a href="#Matrice" class="headerlink" title="Matrice"></a>Matrice</h1><h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p>矩阵产生于对解线性方程组的研究中。例如求解以下方程组：<br>$$<br>\begin{cases}<br>    2x - y = 1 \<br>     x + y = 5 \<br>\end{cases}<br>$$<br>有两种思路。一个是熟知的<strong>消元法</strong>，它的图形解释为两个直线的交点：</p>
 <p><img src="E:%5CLessons%5Cmathematics%5Cmd%5CAdvanced-Mathematics%5Crow_picture.png" alt="row_picture"></p>
 <p>这是一个<strong>行观点（row picture）</strong>。</p>
 <p>另一个观点是，将它视作<strong>求解线性组合问题</strong>的系数：<br>$$<br>x<br>\begin{bmatrix}<br>2 \<br>1<br>\end{bmatrix}<br>+y<br>\begin{bmatrix}<br>-1 \<br>1<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>1 \<br>5<br>\end{bmatrix}<br>$$<br>它的图形解释：</p>
@@ -662,8 +506,6 @@
 </tr>
 </tbody></table>
 
-          
-        
       
     </div>
     
@@ -671,6 +513,8 @@
     
 
 	<div>
+      
+        
       
 	</div>
     
@@ -683,147 +527,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xp-speit2018">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome to Xp-speit2018's blog!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/14/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-14T18:54:33+08:00">
-                2019-11-14
-              </time>
+              <a href="/2019/11/14/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2019/11/15/Duality/" rel="prev" title="Duality">
+                Duality <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-	<div>
-      
-	</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -833,10 +562,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -844,6 +574,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -864,8 +598,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -907,6 +650,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Matrice"><span class="nav-number">1.</span> <span class="nav-text">Matrice</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#起源"><span class="nav-number">1.1.</span> <span class="nav-text">起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量的描述"><span class="nav-number">1.2.</span> <span class="nav-text">向量的描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#含义"><span class="nav-number">1.2.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notation"><span class="nav-number">1.2.2.</span> <span class="nav-text">Notation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量系统的描述"><span class="nav-number">1.3.</span> <span class="nav-text">向量系统的描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#含义-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notation-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">Notation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性变换的描述"><span class="nav-number">1.4.</span> <span class="nav-text">线性变换的描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#含义-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#化整为零"><span class="nav-number">1.4.2.</span> <span class="nav-text">化整为零</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notation-2"><span class="nav-number">1.4.3.</span> <span class="nav-text">Notation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵的秩"><span class="nav-number">1.5.</span> <span class="nav-text">矩阵的秩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性映射的秩"><span class="nav-number">1.5.1.</span> <span class="nav-text">线性映射的秩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯消元法"><span class="nav-number">1.5.2.</span> <span class="nav-text">高斯消元法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#等价矩阵"><span class="nav-number">1.5.3.</span> <span class="nav-text">等价矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵乘法的应用"><span class="nav-number">1.6.</span> <span class="nav-text">矩阵乘法的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#向量-amp-向量：点乘"><span class="nav-number">1.6.1.</span> <span class="nav-text">向量&amp;向量：点乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵-amp-向量：施加线性变换"><span class="nav-number">1.6.2.</span> <span class="nav-text">矩阵&amp;向量：施加线性变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵-amp-矩阵：表示复合变换"><span class="nav-number">1.6.3.</span> <span class="nav-text">矩阵&amp;矩阵：表示复合变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵-amp-矩阵：表示初等变换"><span class="nav-number">1.6.4.</span> <span class="nav-text">矩阵&amp;矩阵：表示初等变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基变换与过渡矩阵"><span class="nav-number">1.7.</span> <span class="nav-text">基变换与过渡矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.7.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造"><span class="nav-number">1.7.2.</span> <span class="nav-text">构造</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#符号系统总结"><span class="nav-number">1.8.</span> <span class="nav-text">符号系统总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1054,6 +813,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

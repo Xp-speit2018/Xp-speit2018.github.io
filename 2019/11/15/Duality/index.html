@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="对偶空间引入一个向量空间 $$E$$ 的对偶空间$$E^$$定义为从该空间到$$\cal K$$的线性映射集合：$$E^ = {\cal L} _{\cal K}({E}, {\cal K})$$这里$\cal K = C$ 或者$\cal K=R$ .  以下分析只在有限维度下讨论。  本节内容的本质：在向量空间中，一个对象可以表达为若干合理选择的简单对象的线性和。如此可以该对象分解为若干足够简">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Duality">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Duality&#x2F;index.html">
+<meta property="og:site_name" content="Welcome to Xp-speit2018&#39;s blog!">
+<meta property="og:description" content="对偶空间引入一个向量空间 $$E$$ 的对偶空间$$E^$$定义为从该空间到$$\cal K$$的线性映射集合：$$E^ = {\cal L} _{\cal K}({E}, {\cal K})$$这里$\cal K = C$ 或者$\cal K=R$ .  以下分析只在有限维度下讨论。  本节内容的本质：在向量空间中，一个对象可以表达为若干合理选择的简单对象的线性和。如此可以该对象分解为若干足够简">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-09T02:37:44.045Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/15/Duality/"/>
+
+
+
+
+
+  <title>Duality | Welcome to Xp-speit2018's blog!</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+	<a href="https://github.com/Xp-speit2018" target="_blank" rel="noopener"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Welcome to Xp-speit2018's blog!</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">may you no worries</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/Duality/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xp-speit2018">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to Xp-speit2018's blog!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Duality</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-15T13:45:17+08:00">
+                2019-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="对偶空间"><a href="#对偶空间" class="headerlink" title="对偶空间"></a>对偶空间</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>一个向量空间 $$E$$ 的<strong>对偶空间</strong>$$E^<em>$$定义为从该空间到$$\cal K$$的线性映射集合：<br>$$<br>E^</em> = {\cal L} _{\cal K}({E}, {\cal K})<br>$$<br>这里$\cal K = C$ 或者$\cal K=R$ .</p>
+<blockquote>
+<p><em>以下分析只在有限维度下讨论。</em></p>
+</blockquote>
+<p><strong>本节内容的本质：在向量空间中，一个对象可以表达为若干合理选择的简单对象的线性和。如此可以该对象分解为若干足够简单的对象逐个研究。同时，研究方法也可以合理分解为若干基本的研究方法，这两种方法是等价的。</strong></p>
+<p>在$E$中有一复杂向量$x$，我们可以选择一组恰当的基底$(e_i)_{i \in I}$将其表示为：<br>$$<br>x = \sum \lambda_ie_i<br>$$</p>
+<blockquote>
+<p>这里的“恰当”指对于将要研究的性质来说这组基底是简单的。例如研究内积，正交基通常是恰当的。</p>
+</blockquote>
+<p>同样，对于$E^*$中的一个复杂映射$f$，我们也可以选择一组基底$(\varphi_i)_{i \in I}$将其表示为：<br>$$<br>f = \sum \mu_i \varphi_i<br>$$</p>
+<p>如何选择使这组基底简单，是即将研究的问题。</p>
+<h2 id="构造对偶基"><a href="#构造对偶基" class="headerlink" title="构造对偶基"></a>构造对偶基</h2><blockquote>
+<p>这一部分只是为了说明思想方法。为了简便，取$ E = \cal R^2$。</p>
+</blockquote>
+<p><strong>$\cal R^2$中最简单的基底为 la base canonique</strong>，即$((1,0),(0,1))$。</p>
+<p>相应的，最简单的向量就是这两个基底之一。比如我们取：<br>$$<br>x = e_1 = (1,0)<br>$$<br>那么最简单的映射好像应该是<strong>单位元至单位元</strong>的映射。由此我们想写下：<br>$$<br>\varphi_1 : e_1 \rightarrow 1 \<br>\varphi_2 : e_2 \rightarrow 1<br>$$<br>没错，这就已经成了。可它是怎么来的呢？</p>
+<p>在$\cal R^2$中，对于一个确定的向量来说，它的扩张方向是一维的。那么就可以构建一个从这个维度映射到向量长度的映射：<br>$$<br>f|<em>{Vect(x_0)}: x \rightarrow ||x||，\forall x \in Vect(x_0)<br>$$<br>这个映射的<strong>“简单性”</strong>体现在系数为1，这是一个单位元。如果我们设$e</em>{x_0}$为$x_0$方向的单位向量，那么其实有：<br>$$<br>f|<em>{Vect(x_0)}(x)=f|</em>{Vect(x_0)}(||x||e_{x_0})=||x||f|<em>{Vect(x_0)}(e</em>{x_0})<br>$$<br>于是这里我们可以构造一个<strong>更加简单</strong>的映射$\varphi|<em>{Vect(x_0)}$，它<strong>只关心</strong>单位向量$e</em>{x_0}$：<br>$$<br>\varphi|<em>{Vect(x_0)}(e</em>{x_0}) = 1<br>$$<br>但是，我们想要的映射应该是定义在$\cal R^2$上的。那我们使用<strong>factorisation</strong>的方法，只要用一个<strong>inclusion canonique</strong>就能解决问题（设$G$是$Vect(e_{x_0})$的补空间）：<br>$$<br>\varphi =i_{Vect(e_{x_0})} \circ \varphi|<em>{Vect(x_0)} = p</em>{Vect(e_{x_0})||G}<br>$$<br>其实这就是一个<strong>投影</strong>。</p>
+<p>对于给定向量来说，如此构造的<strong>“简单”映射</strong>已经足够简单。但是对于$\cal R^2$中的任意向量来说，他们的扩张方向有无穷多个，但是可以分解为两个基本方向。</p>
+<p>我们可以看出$f$的定义与由$x_0$确定的扩张方向有关，那么我们取<strong>两个最简单的方向</strong>，定义：<br>$$<br>f_{1}|<em>{Vect(e_1)} = x \rightarrow ||x||, \forall x \in Vect(x_0) \<br>f</em>{2}|<em>{Vect(e_1)} = x \rightarrow ||x||, \forall x \in Vect(x_0)<br>$$<br>类似有：<br>$$<br>f_1 = i</em>{Vect(e_1) \in E} \circ f_1|<em>{Vect(e_1)} = p</em>{Vect(e_1)||Vect(e2)} \<br>f_2 = i_{Vect(e_2) \in E} \circ f_2|<em>{Vect(e_2)} = p</em>{Vect(e_2)||Vect(e1)}<br>$$<br>对的，它们就是一个<strong>投影</strong>。我们来看看他们的输入输出：（以$f_1$为例）：<br>$$<br>\begin{align}<br>&amp;f_1 ((1,0))&amp;=&amp;1 \<br>&amp;f_1 ((42,2))&amp;=&amp;42 \<br>&amp;f_1 ((0,65535)) &amp;=&amp;0 \<br>…<br>\end{align}<br>$$<br>进一步思考第二行的含义：<br>$$<br>\begin{align}<br>f_1((42,2)) &amp;=f_1(42(1,0)+2(0,1)) \<br>&amp;=42f_1((1,0))+2f_1((0,1)) \<br>&amp;=42\times1+2\times0 \<br>&amp;=42 \<br>\end{align}<br>$$<br>于是可以简化，仅仅关心单位向量的映射即：</p>
+<p>$$<br>\varphi_1 : e_1 \rightarrow 1 \<br>\varphi_2 : e_2 \rightarrow 1<br>$$<br>如此构造的<strong>最简单</strong>的一组映射$（\varphi_1，\varphi_2)$就被称为$(e_1,e_2)$的一组对偶基。</p>
+<blockquote>
+<p>太长不看版：$E^*$中的对偶基将$E$中其对应的基底映射到单位元1。</p>
+</blockquote>
+<h2 id="复杂问题的分解"><a href="#复杂问题的分解" class="headerlink" title="复杂问题的分解"></a>复杂问题的分解</h2><p>于是对于$E$与$E^<em>$中的元素，我们有了一套配套的行之有效的分解方法：<br>$$<br>x \in E ,x = \sum_{i=1}^{n} \lambda_i e_i,\lambda_i = e^</em>(x) \<br>\varphi \in E, \varphi = \sum_{i=1}^{n}\mu_ie^<em>_i,\mu_i =\varphi(e_i)<br>$$<br>这就是说，我们选择一组*</em>基底<strong>，就可以计算出任意一个元素在这组基底下分解的</strong>系数**。</p>
+<p>仍然以$E=\cal R^2$为例：</p>
+<p>选择$e_1=(3,4),e_2=(3,-4)$，这组基的对偶基为：<br>$$<br>e^<em>_1 : (x,y) \rightarrow \frac{1}{5}(3,4).(x,y)=\frac{3}{5}x+\frac{4}{5}y \<br>e^</em>_2 : (x,y) \rightarrow \frac{1}{5}(3,-4).(x,y)=\frac{3}{5}x-\frac{4}{5}y<br>$$<br>要计算映射$f : (x,y) \rightarrow 6x$的分解，即计算：<br>$$<br>\mu_1 = \varphi(e_1) = 3 \<br>\mu_2 = \varphi(e_2) = 3<br>$$<br>于是$f = \mu_1+\mu_2$。</p>
+<h2 id="映射到多维度"><a href="#映射到多维度" class="headerlink" title="映射到多维度"></a>映射到多维度</h2><p>对偶空间内的函数都映射到了一根数轴上，也就是说他们的象都是标量。但是很多时候我们面临的将是多维度到多维度的映射，这该如何联系呢？</p>
+<p>思路也很简单，仍旧遵循<strong>从单位元映射到单位元</strong>。</p>
+<p>假设我们想要研究的线性映射$f \in {\cal L}(E,E’)$，由线性映射的性质可知$dimE’ \leq dimE$。</p>
+<p>假设$(e_i)<em>{i \in I}$是$E$的一组基，$(b_i)</em>{i \in I}$是$E^*$的一组famille géneratrice，那么依然可以构造：<br>$$<br>\varphi_{ij} : e_i \rightarrow b_j,(i,j) \in I^2<br>$$</p>
+<h2 id="为什叫“对偶”？"><a href="#为什叫“对偶”？" class="headerlink" title="为什叫“对偶”？"></a>为什叫“对偶”？</h2><p>对偶隐含了“对应”、“等价”这些意思。哪里可以体现呢？</p>
+<p>举个例子：假设$\cal E =(e_i)<em>{i \in I}$和$\cal B =(b_i)</em>{i \in I}$是$\cal R^2$的两组基，一个从$\cal R^2$到$\cal R^2$的线性映射：<br>$$<br>f: x=\lambda_1e_1+\lambda_2e_2 \rightarrow y=\mu_1b_1+\mu_2b_2<br>$$<br>其中$\lambda_1,\lambda_2 \neq 0$（因为dim不能增大）。</p>
+<h3 id="I-分解向量的角度"><a href="#I-分解向量的角度" class="headerlink" title="I. 分解向量的角度"></a>I. 分解向量的角度</h3><p>设$\cal B$在$\cal E$下的分解写作：<br>$$<br>b_1 = (k_1e_1+m_1e_2) \<br>b_2 = (k_2e_1+m_2e_2)<br>$$<br>那么象将写作：<br>$$<br>y = \mu_1(k_1+k_2)e_1 + \mu_2(m_1+m_2)e_2<br>$$</p>
+<h3 id="II-分解映射的角度"><a href="#II-分解映射的角度" class="headerlink" title="II.分解映射的角度"></a>II.分解映射的角度</h3><p>设$f$在$\cal B$和$\cal E$下的分解为：<br>$$<br>f = \frac{\mu_1}{\lambda_1}(k_1\varphi_{11}+m_1\varphi_{12})+\frac{\mu_2}{\lambda_2}(k_2\varphi_{21}+m_2\varphi_{22})<br>$$<br>那么象将写作：<br>$$<br>\begin{align}<br>y &amp;= f(\lambda_1e_1+\lambda_2e_2) \<br>  &amp;= \lambda_1f(e_1)+\lambda_2f(e_2) \<br>  &amp;= \mu_1(k_1\varphi_{11}+m_1\varphi_{12}+k_2\varphi_{21}+m_2\varphi_{22})(e_1) + \mu_2(k_1\varphi_{11}+m_1\varphi_{12}+k_2\varphi_{21}+m_2\varphi_{22})(e_2) \<br>  &amp;= \mu_1(k_1+k_2)b_1+\mu_2(m_1+m_2)b_2<br>\end{align}<br>$$</p>
+<h3 id="III-比较"><a href="#III-比较" class="headerlink" title="III.比较"></a>III.比较</h3><p>这两种方法得到的结果是一样的。从得到相同结果的不同的角度在数学上称为<strong>对偶</strong>。</p>
+
+      
+    </div>
+    
+    
+    
+
+	<div>
+      
+        
+      
+	</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/15/Matrice/" rel="next" title="Matrice">
+                <i class="fa fa-chevron-left"></i> Matrice
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Xp-speit2018</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对偶空间"><span class="nav-number">1.</span> <span class="nav-text">对偶空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引入"><span class="nav-number">1.1.</span> <span class="nav-text">引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造对偶基"><span class="nav-number">1.2.</span> <span class="nav-text">构造对偶基</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂问题的分解"><span class="nav-number">1.3.</span> <span class="nav-text">复杂问题的分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#映射到多维度"><span class="nav-number">1.4.</span> <span class="nav-text">映射到多维度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什叫“对偶”？"><span class="nav-number">1.5.</span> <span class="nav-text">为什叫“对偶”？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#I-分解向量的角度"><span class="nav-number">1.5.1.</span> <span class="nav-text">I. 分解向量的角度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#II-分解映射的角度"><span class="nav-number">1.5.2.</span> <span class="nav-text">II.分解映射的角度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#III-比较"><span class="nav-number">1.5.3.</span> <span class="nav-text">III.比较</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xp-speit2018</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
